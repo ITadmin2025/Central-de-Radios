@@ -30,7 +30,7 @@ body {
   
   .radios {
     display: flex;
-    gap: 20px; /* espacio entre logos */
+    gap: 10px; /* espacio entre logos */
     justify-content: center; /* centrado en la página */
     flex-wrap: wrap; /* que bajen si no hay espacio */
     margin-top: 30px;
@@ -39,10 +39,13 @@ body {
   .radios div {
     text-align: center;
     cursor: pointer;
+    flex: 1 1 45%;  /* Permite que cada logo ocupe hasta el 45% del ancho */
+    max-width: 200px; /* Limita el tamaño máximo */
+    margin-bottom: 20px; /* Asegura que haya espacio entre las filas */
   }
   
   .radios img {
-    width: 200%;
+    width: 100%;
     max-width: 200px;
     height: Auto;
     object-fit: contain;
@@ -148,3 +151,4 @@ body.modo-oscuro {
       max-width: 90%;
     }
   }
+  
