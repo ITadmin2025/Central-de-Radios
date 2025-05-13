@@ -42,8 +42,9 @@ body {
   }
   
   .radios img {
-    width: 200px;
-    height: 120px;
+    width: 200%;
+    max-width: 200px;
+    height: Auto;
     object-fit: contain;
     border-radius: 20px;
     background-color: white; /* hace contraste si tu fondo es oscuro */
@@ -129,4 +130,21 @@ body.modo-oscuro {
   body.modo-oscuro footer a {
     color: #70b7ff;
   }
+@media (max-width: 600px) {
+    h1 {
+      font-size: 1.5em;
+    }
   
+    p {
+      font-size: 1em;
+    }
+  
+    .radios {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .radios img {
+      max-width: 90%;
+    }
+  }
