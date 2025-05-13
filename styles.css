@@ -1,0 +1,132 @@
+/* Aplica a toda la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  /* Título principal */
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+  }
+  
+  /* Subtítulo o descripción */
+  p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  /* Línea divisora */
+  hr {
+    margin: 30px 0;
+  }
+  
+ 
+  
+  .radios {
+    display: flex;
+    gap: 20px; /* espacio entre logos */
+    justify-content: center; /* centrado en la página */
+    flex-wrap: wrap; /* que bajen si no hay espacio */
+    margin-top: 30px;
+  }
+  
+  .radios div {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .radios img {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 20px;
+    background-color: white; /* hace contraste si tu fondo es oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer; /* muestra que es interactivo */
+  }
+  
+  .radios img:hover {
+    transform: scale(1.05); /* efecto al pasar el mouse */
+  }
+  .radio-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .radio-btn img {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .radio-btn img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .divisor {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px auto;
+    width: 80%;
+  }
+  /* === Botón para modo oscuro === */
+#modoOscuroToggle {
+    position: fixed;         /* Posición fija en pantalla */
+    top: 10px;               /* 10 píxeles desde arriba */
+    right: 10px;             /* 10 píxeles desde la derecha */
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #modoOscuroToggle:hover {
+    background-color: #ddd;
+  }
+  /* === Modo oscuro === */
+body.modo-oscuro {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  body.modo-oscuro h1,
+  body.modo-oscuro p {
+    color: #ffffff;
+  }
+  
+  body.modo-oscuro hr {
+    border-color: #555;
+  }
+  
+  body.modo-oscuro .radio-btn img {
+    background-color: #333;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.modo-oscuro footer {
+    color: #aaa;
+  }
+  
+  body.modo-oscuro footer a {
+    color: #70b7ff;
+  }
+  

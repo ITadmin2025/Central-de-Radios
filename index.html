@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devices-width, initial-scale=0.1">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Central de Radios"</title>
+  
+</head>
+<body>
+  <button id="modoOscuroToggle">🌙</button>  
+  <h1>Central de Radios</h1>
+  <p>Escuchá nuestras emisoras en línea. Calidad y variedad desde un solo lugar.</p>
+  <hr>
+
+  <div class="radios">
+    <div>
+        <button class="radio-btn" onclick="reproducirRadio('http://tu-url-de-radio')">
+        <img src="Logos/Accion radio.png" alt="Accion Radio" width="100">
+        </button>
+        <p>Radio Accion</p>
+        <!--<button class="radio-btn" onclick="mostrarReproductor('accion')">Accion Radio</button> -->
+    </div>
+    <div> 
+        <button class="radio-btn" onclick="reproducirRadio('http://192.168.9.36:8000/Pegajosa')">
+        <img src="Logos/Picosa-Radio-93.7fm.png" alt="Accion Radio" width="100">
+        </button>
+        <p>Picosa Radio</p>   
+       <!-- <button class="radio-btn" onclick="mostrarReproductor('Picosa')">Radio Picosa</button> -->
+    </div>
+    <div> 
+        <button class="radio-btn" onclick="reproducirRadio('http://192.168.9.22:8000/radio_mia')">
+        <img src="Logos/Mia FM.png" alt="Accion Radio"  class="ajustar-mia">
+        </button>
+        <p>Mia.FM</p>   
+        <!-- <button class="radio-btn" onclick="mostrarReproductor('Mia')">Radio Mia FM</button> -->
+    </div>
+    <div>  
+        <button class="radio-btn" onclick="reproducirRadio('http://tu-url-de-radio')">
+        <img src="Logos/Joya FM.png" alt="Accion Radio" width="100">
+        </button>
+        <p>Joya FM</p> 
+
+      <!--  <button class="radio-btn" onclick="mostrarReproductor('Joya')">Joya FM</button> -->
+    </div>         
+  </div>
+</div> <!-- fin de .radios -->
+    <hr class="divisor">
+<div id="reproductor-container"></div>
+<script>
+    function reproducirRadio(url) {
+      // Selecciona el contenedor donde irá el reproductor
+      const contenedor = document.getElementById('reproductor-container');
+  
+      // Crea el código del reproductor
+      contenedor.innerHTML = `
+        <div style="text-align: center; margin-top: 20px;">
+          <audio controls autoplay>
+            <source src="${url}" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+          </audio>
+        </div>
+      `;
+    }
+  </script>
+  <script>
+    const botonModoOscuro = document.getElementById('modoOscuroToggle');
+  
+    botonModoOscuro.addEventListener('click', () => {
+      // Alternar una clase al body
+      document.body.classList.toggle('modo-oscuro');
+  
+      // Cambiar el ícono del botón
+      if (document.body.classList.contains('modo-oscuro')) {
+        botonModoOscuro.textContent = '☀️'; // modo claro
+      } else {
+        botonModoOscuro.textContent = '🌙'; // modo oscuro
+      }
+    });
+  </script>
+  
+</body>
+</html>
